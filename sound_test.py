@@ -19,7 +19,7 @@ params = {
 def play_wav_files():
     print(sound.getDevices())
     prefs.hardware['audioLib'] = ['ptb']  # 可选值: ['ptb', 'pyo', 'pygame']
-    prefs.hardware['audioDevice'] = '耳机 (Realtek(R) Audio)'  # 指定设备名称
+    prefs.hardware['audioDevice'] = '耳机 (2- WH-CH720N)'  # 指定设备名称
     audio_file = "40Hz.wav"
     sound_stim = sound.Sound(
         os.path.abspath(audio_file),

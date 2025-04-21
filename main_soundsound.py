@@ -12,7 +12,7 @@ def run_assr_experiment(params):
     # 初始化窗口
     win = visual.Window(
         size=(1280, 720),
-        fullscr=True,
+        fullscr=False,
         allowGUI=True,
         monitor='testMonitor',
         units='pix'
