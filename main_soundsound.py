@@ -83,7 +83,7 @@ def run_assr_experiment(params):
 
 
                 win.flip()
-                core.wait(params['wait_duration'])
+                core.wait(random.uniform(3, 5))
 
                 # 记录数据
                 log_file.write(f"{block + 1},{trial_idx + 1},{time.strftime('%H:%M:%S')}\n")
@@ -111,7 +111,6 @@ if __name__ == "__main__":
         'mod_frequencies': 40,
         'carrier_freq': 1000,
         'stim_duration': 2.0,
-        'wait_duration': 5.0,
         'sample_rate': 44100,
         'isi_range': [1.5, 2.0],
         'sound_level': 60,
