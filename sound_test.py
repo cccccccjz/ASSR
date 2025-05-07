@@ -1,4 +1,4 @@
-from playsound import playsound
+
 import os
 from psychopy import visual, event, sound, core, prefs
 params = {

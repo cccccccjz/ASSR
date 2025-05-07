@@ -1,8 +1,25 @@
 import numpy as np
 from scipy.io import wavfile  # 改用scipy库保存浮点型音频
-
-
+import os
+params = {
+        'subject_id': 'S01',
+        'mod_frequencies': 20,
+        'carrier_freq': 1000,
+        'stim_duration': 2.0,
+        'sample_rate': 44100,
+        'isi_range': [1.5, 2.0],
+        'sound_level': 60,
+        'n_blocks': 1,
+        'trials_per_block': 10,
+        'trigger_codes': {
+            '40Hz_start': 0x01,
+            '40Hz_end': 0x02,
+            'start': 0xFF,
+            'end': 0xFE
+        }
+    }
 def generate_am_wave(params):
+
     # 从参数提取关键值
     sr = params['sample_rate']
     duration = params['stim_duration']
@@ -42,7 +59,9 @@ def generate_am_wave(params):
 
     # 保存为32位浮点WAV
     wavfile.write(
-        "40Hz.wav",
+       f'{mod_freq}Hz.wav',
         sr,
         am_signal.astype(np.float32)  # 必须明确指定浮点型
     )
+if __name__ == "__main__":
+    generate_am_wave(params)

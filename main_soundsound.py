@@ -105,7 +105,7 @@ def run_assr_experiment(params):
 
 if __name__ == "__main__":
     prefs.hardware['audioLib'] = ['ptb']  # 可选值: ['ptb', 'pyo', 'pygame']
-    prefs.hardware['audioDevice'] = '耳机 (Realtek(R) Audio)'  # 指定设备名称
+    prefs.hardware['audioDevice'] = '耳机 (2- WH-CH720N)'  # 指定设备名称
     params = {
         'subject_id': 'S01',
         'mod_frequencies': 40,
